@@ -8,10 +8,10 @@ This service is part of the IceNine project, a scalable cloud-based multiplayer 
 
 Concepts/technologies used:
 - Golang with Buffalo web framework for application creation
- - HTTP request handling
- - Object Relational Mapping for MySQL database access using Buffalo's Pop library
+ -- HTTP request handling
+ -- Object Relational Mapping for MySQL database access using Buffalo's Pop library
 - JavaScript with React Redux for frontend
- - Sagas for management of application side effects
- - Selectors for efficient computation of derived state data 
- - WebSockets for communication with other services in the IceNine system
+ -- Sagas for management of application side effects
+ -- Selectors for efficient computation of derived state data 
+ -- WebSockets for communication with other services in the IceNine system
 - Protobuf for all message (de)serialization

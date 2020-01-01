@@ -1,0 +1,49 @@
+.bar {
+    width: "100%";
+    height: "53px";
+    background-color: #4e4e4e;
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 20px;
+}
+
+.statusText {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    margin-top: 7px;
+    margin-right: 7px;
+    margin-bottom: 7px;
+    margin-left: 7px;
+}
+
+.comments {
+    margin-right: 7px;
+    margin-top: 7px;
+    margin-right: 7px;
+    margin-bottom: 7px;
+    margin-left: 0px;
+}
+
+.buttons {
+    margin-top: 7px;
+    margin-right: 7px;
+    margin-bottom: 7px;
+    margin-left: 0px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.hiddenIcon {
+    display: none;
+}
+
+.errorIcon {
+    padding-top: 7px;
+    padding-left: 10px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+}

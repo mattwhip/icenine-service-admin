@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package kafkawebsocket;
+
+message Subscribe {
+    // A map of topics to starting offsets
+    map<string, int64> topicOffsetMap = 1;
+}
+
+message Unsubscribe {
+    // An list of topics to be removed from the subscriptions list
+    repeated string topics = 1;
+}
+
+message SubscriptionsUpdated {
+    // The full map of updated subscribed topics and their byte values
+    map<string, bytes> topics = 1;
+}

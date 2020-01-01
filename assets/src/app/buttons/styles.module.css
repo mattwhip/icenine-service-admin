@@ -1,0 +1,43 @@
+.buttonIcon {
+    color: white;
+    cursor: pointer;
+}
+.buttonIcon:hover {
+    color: #dddd;
+}
+.buttonIcon:active {
+    color: #aaaa;
+}
+
+.errorIcon {
+    color: #ef5350;
+    cursor: pointer;
+}
+.errorIcon:hover {
+    color: #772211;
+}
+.errorIcon:active {
+    color: #552211;
+}
+
+.stopIcon {
+    color: #9e2800;
+    cursor: pointer;
+}
+.stopIcon:hover {
+    color: #7a1f00;
+}
+.stopIcon:active {
+    color: #5c1700;
+}
+
+.playIcon {
+    color: #009926;
+    cursor: pointer;
+}
+.playIcon:hover {
+    color: #00791e;
+}
+.playIcon:active {
+    color: #005e17;
+}

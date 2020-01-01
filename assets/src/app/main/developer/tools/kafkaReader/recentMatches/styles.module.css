@@ -1,0 +1,47 @@
+.recentMatchesContainer {
+    padding: 0;
+}
+
+.recentMatchesStatusBar {
+    padding-bottom: 5px;
+    padding-left: 0px;
+}
+.recentMatchesRefreshIcon {
+    padding-left: 10px;
+}
+.recentMatches {
+    padding: 0px;
+    width: 350px;
+    background-color: #252525;
+}
+.recentMatches ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.recentMatches li {
+    list-style: none;
+    padding: 0;
+    font-size: 14px;
+}
+.recentMatches li a {
+    margin-bottom: 2px;
+    display: block;
+    padding: 8px;
+    background-color: #555;
+    text-decoration: none;
+    color: white;
+}
+
+.recentMatchContent {
+    color: white;
+    font-size: 12px;
+}
+
+.recentMatchButtonsHeader {
+    padding-bottom: 10px;
+}
+.recentMatchButton {
+    margin-bottom: 5px;
+    margin-right: 5px;
+}

@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package useraccounts;
+
+message LoginFacebookRequest {
+    // The Facebook access token
+    string accessToken = 1;
+    // The unique ID of the device being used to access the system
+    string deviceID = 2;
+    // The model information of the device being used to access the system
+    string deviceModelInfo = 3;
+    // The Facebook graph API user ID
+    string facebookID = 4;
+    // The operating system of the device being used to access the system
+    string operatingSystem = 5;
+}
+
+message LoginFacebookResponse {
+    // The json web token used to authorize the user in other parts of the system
+    string jwt = 1;
+    // The coins in the user's wallet
+    int64 coins = 2;
+    // The skill level of the user
+    float skillLevel = 3;
+}

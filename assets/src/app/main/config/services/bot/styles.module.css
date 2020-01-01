@@ -1,0 +1,44 @@
+.configTextField {
+    background-color: lightgray;
+    width: 125px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 5px;
+}
+
+.configTextLabel {
+    width: 175px;
+    text-align: left;
+    display: table-cell;
+    vertical-align: bottom;
+}
+
+.configTextDescription {
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+.dirtyBlueprint {
+    font-weight: bold;
+}
+
+.components {
+    width: 400px;
+    margin-left: 10px;
+}
+
+.componentHeader {
+    padding-bottom: 15px;
+}
+
+.componentCopyIcon {
+    padding: 0px;
+    padding-left: 10px;
+}
+
+.copy {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}

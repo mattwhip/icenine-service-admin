@@ -1,0 +1,68 @@
+syntax = "proto3";
+
+package userdata;
+
+// Interface exported by the server
+service UserData {
+	// Obtains data for a given user ID.
+	rpc GetUser(UserRequest) returns (UserResponse) {}
+	// Initialize data for a new user
+	rpc InitNewUser(UserRequest) returns (UserResponse) {}
+	// Perform a coin transaction on one or more users
+	rpc DoCoinTransaction(CoinTransactionRequest) returns (CoinTransactionResponse) {}
+	// Update skill levels for 
+	rpc UpdateSkillLevels(UpdateSkillRequest) returns (UpdateSkillResponse) {}
+}
+
+// A request for user data
+message UserRequest {
+	// User ID of desired user data
+	string UID = 1;
+}
+
+// A response with user data
+message UserResponse {
+	// Coins
+	int64 coins = 1;
+	// Exists is true if the user exists
+	bool exists = 2;
+	// Glicko2 rating of the player
+	Rating rating = 3;
+}
+
+// A request to perform a coin transaction on one or more users
+message CoinTransactionRequest {
+	map<string, int64> transactions = 1;
+}
+
+// A reponse with final balances after a coin transaction is executed
+message CoinTransactionResponse {
+	map<string, int64> balances = 1;
+}
+
+// A request to update skill levels for all players involved in a collection of match results
+message UpdateSkillRequest {
+	repeated MatchResult matchResults = 1;
+}
+
+// A response from a skill update that includes updated Glicko2 ratings for involved players
+message UpdateSkillResponse {
+	map<string, Rating> ratings = 1;
+}
+ 
+// A match result describing a win/loss/draw state
+message MatchResult {
+	string player1 = 1;
+	string player2 = 2;
+	double score = 3; 
+}
+
+// A Glicko2 rating
+message Rating {
+	// Rating of the player
+	double value = 1;
+	// Rating deviation of the player
+	double deviation = 2;
+	// Rating volatility of the player
+	double volatility = 3;
+}

@@ -1,0 +1,10 @@
+.dashboard {
+    background-color: #1e1e1e;
+    color: white;
+    height: 100%;
+    width: 100%;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+}

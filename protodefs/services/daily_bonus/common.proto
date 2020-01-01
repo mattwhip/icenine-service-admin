@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package dailybonus;
+
+
+message StatusResponse {
+    // The current daily bonus status
+    Status status = 1;
+    // The wheel to be played
+    Wheel wheel = 2;
+}
+
+message PlayResponse {
+    // The current daily bonus status
+    Status status = 1;
+    // The wheel to be played
+    Wheel wheel = 2;
+    // The final index that the wheel lands on
+    int32 index = 3;
+    // The final balance of the user after addition of the bonus award
+    int64 balance = 4;
+}
+
+message Status {
+    // True if the bonus is available
+    bool isAvailable = 1;
+    // Seconds until the daily bonus is next available
+    int32 secondsUntilAvailable = 2;
+    // The current streak of the user
+    int32 streak = 3;
+}
+
+message Wheel {
+    // The award values on the wheel
+    repeated int64 values = 1;
+}

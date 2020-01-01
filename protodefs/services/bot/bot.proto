@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package bot;
+
+service Bot {
+    // Provision one or more Bots for a game
+    rpc ProvisionBotsForGame(ProvisionRequest) returns (ProvisionResponse) {}
+}
+
+message ProvisionRequest {
+    // The specifications for how to provision bots
+    repeated ProvisionSpec specs = 1;
+}
+
+message ProvisionSpec {
+    // The number of bots to provision with this specification
+    int32 count = 1;
+    // The required coins for the game to be played
+    int64 requiredCoins = 2;
+    // A choice of how to provision these bots (with a preconfigured blueprint or manual spec collection)
+    oneof specMethod {
+        // The controller component specs to use for the bots provisioned with this specification
+        ControllerComponentSpecCollection specCollection = 3;
+        // The name of the blueprint stored by the bot service
+        string blueprintName = 4;
+    }
+}
+
+message ControllerComponentSpecCollection {
+    repeated ControllerComponentSpec componentSpecs = 1;
+}
+
+message ControllerComponentSpec {
+    // The controller component type
+    string type = 1;
+    // The module
+    map<string, string> config = 2;
+}
+
+message ProvisionResponse {
+    // The user IDs of the provisioned bots
+    repeated string userIDs = 1;
+}

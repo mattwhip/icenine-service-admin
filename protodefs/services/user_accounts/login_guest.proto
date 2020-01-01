@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+package useraccounts;
+
+message LoginGuestRequest {
+    // The unique ID of the device being used to access the system
+    string deviceID = 1;
+    // The model information of the device being used to access the system
+    string deviceModelInfo = 2;
+    // The operating system of the device being used to access the system
+    string operatingSystem = 3;
+}
+
+message LoginGuestResponse {
+    // The json web token used to authorize the user in HTTP APIs
+    string jwt = 1;
+    // The ID used to identify this user when Kafka messages are sent from the player to the server
+    bytes userID = 2;
+    // The server-to-user kafka topic used to send messages from the server to the player
+    string serverToUserTopic = 3;
+    // The coins in the guest user's wallet
+    int64 coins = 4;
+    // The skill level of the guest user
+    float skillLevel = 5;
+    // The daily bonus availability
+    bool isDailyBonusAvailable = 6;
+    // The number of seconds until the next daily bonus is available
+    int32 secondsUntilDailyBonusAvailable = 7;
+    // The current daily bonus streak
+    int32 dailyBonusStreak = 8;
+    // The wheel values of the next daily bonus to play
+    repeated int64 dailyBonusWheelValues = 9;
+    // The topic used to send game messages from user to server if game is in progress 
+    string gameInProgressTopic = 10;
+    // The server-specified offset intended for the client to use on WebSocket topic subscription
+    int64 serverToUserTopicOffset = 11;
+}

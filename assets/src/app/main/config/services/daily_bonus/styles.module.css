@@ -1,0 +1,38 @@
+.dailyBonus {
+    margin-top: 10px;
+    margin-left: 10px;
+    height: calc(100vh - 60px - 55px);
+}
+
+.dailyBonusTitleGroup {
+    padding-top: 0px;
+    padding-left: 0px;
+    color: #ffca28;
+}
+
+.configTextField {
+    background-color: lightgray;
+    width: 125px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 5px;
+}
+
+.configTextLabel {
+    width: 175px;
+    text-align: left;
+    display: table-cell;
+    vertical-align: bottom;
+}
+
+.configTextDescription {
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+.refreshIcon {
+    padding-top: 0px;
+    padding-left: 10px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+}

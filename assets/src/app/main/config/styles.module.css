@@ -1,0 +1,76 @@
+.config {
+    background-color: #1e1e1e;
+    color: white;
+    height: 100%;
+    width: 100%;
+    padding-left: 15px;
+}
+
+.servicesCol {
+    width: 200px;
+    margin-top: 5px;
+}
+
+.servicesTitle {
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.services {
+    padding: 0px;
+    background-color: #252525;
+}
+.services ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.services li {
+    list-style: none;
+    padding: 0;
+    font-size: 14px;
+}
+.services li a {
+    margin-bottom: 2px;
+    display: block;
+    padding: 8px;
+    background-color: #555;
+    text-decoration: none;
+    color: white;
+}
+.firstService {
+    border-radius: 10px 10px 0px 0px;
+}
+.lastService {
+    border-radius: 0px 0px 10px 10px;
+}
+.services li a:hover {
+    background-color: #adadad;
+    color: black;
+}
+.services li a:focus {
+    background-color: #777777;
+    color: black;
+}
+.services li a.active {
+    background-color: #094771;
+    color: white;
+}
+
+.serviceConfig {
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-color: #252525;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.serviceConfigEditPanelContent {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}

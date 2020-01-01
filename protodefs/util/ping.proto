@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package util;
+
+// Ping is a simple ping message that can include a string message
+message Ping {
+    // A message/data that can be included with the ping
+    string message = 1;
+}

@@ -1,0 +1,72 @@
+.developer {
+    background-color: #1e1e1e;
+    color: white;
+    height: 100%;
+    width: 100%;
+    padding-left: 15px;
+}
+
+.toolsCol {
+    width: 200px;
+    margin-top: 5px;
+}
+
+.toolsTitle {
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.tools {
+    padding: 0px;
+    background-color: #252525;
+}
+.tools ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.tools li {
+    list-style: none;
+    padding: 0;
+    font-size: 14px;
+}
+.tools li a {
+    margin-bottom: 2px;
+    display: block;
+    padding: 8px;
+    background-color: #555;
+    text-decoration: none;
+    color: white;
+}
+.firstTool {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.lastTool {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.tools li a:hover {
+    background-color: #adadad;
+    color: black;
+}
+.tools li a:focus {
+    background-color: #777777;
+    color: black;
+}
+.tools li a.active {
+    background-color: #094771;
+    color: white;
+}
+
+.toolPanel {
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-color: #252525;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}

@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+package teenpatti;
+
+service TeenPatti {
+    rpc CreateTable(TableRequest) returns (TableResponse) {}
+}
+
+// A request for table generation
+message TableRequest {
+    //id of the kafka table
+    string tableID = 1;
+    //time given to user to decide action
+    int64 milliSecondsToDecide = 2;
+    //time between rounds
+    int64 milliSecondsBetweenRounds = 3;
+    //time for user action animation
+    int64 milliSecondsForUserActionAnimation = 4;
+    //time for celebration
+    int64 milliSecondsForCelebration = 5;
+    //time before starting first round
+    int64 milliSecondsBeforeFirstRound = 6;
+    //time before the last user in table is forced to exit
+    int64 milliSecondsBeforeLastUserExit = 7;
+    //number of turn a user does not respond before being kicked out
+    int32 idleTurnLimit = 8;
+    //number of seats in the table
+    int32 numberOfSeats = 9;
+    //buy in wallet needed for table
+    int64 wallet = 10;
+    //starting stake amount in table
+    int64 startingStakeAmount = 11;
+    //list of users joining the table
+    repeated string users = 12;
+}
+
+// A response with table generation
+message TableResponse { }
+
+// JoinTable adds a user to a table
+message JoinTable {
+    // an ID of user
+    repeated string userID = 1;
+}

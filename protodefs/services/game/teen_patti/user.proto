@@ -1,0 +1,61 @@
+syntax = "proto3";
+
+package teenpatti;
+
+// UserRequest contains request by user from client
+message UserRequest {
+    oneof request {
+        // action a user takes when its their turn
+        uint32 action = 1;
+    }   
+}
+
+// UserResponse contains the response according to request
+message UserResponse {
+    oneof response {
+        // invalid action by user
+        uint32 invalid = 1;
+        // cards of user
+        Cards userCards = 2;
+        // type of user's exit from table
+        uint32 exitType = 3;
+    }
+}
+
+// UserTurn indicates user's turn
+message UserTurn {
+    // time left to decide in milliseconds
+    int64 timer = 1;
+}
+
+// Sent from server to a user in case of side show
+message SideShowRequest {
+    // from is the userID of user who request a side show
+    string from = 1;
+}
+
+// Sent from user to a server, if sideshow is accepted or denied
+message SideShowResponse {
+    // true if sideshow is accepted; false otherwise 
+    bool accept = 1;
+}
+
+// Used in broadcast to show user action 
+message UserAction {
+    // userID of the user that took the action
+    string id = 1;
+
+    // action a user took
+    uint32 action = 2;
+
+    // amount left in user wallet
+    int64 amount = 3;
+
+    // in case of side show indicates which user the SideShowRequest was sent to
+    string to = 4;
+}
+
+// Cards contain array of cards
+message Cards {
+    repeated string cards = 1;
+}

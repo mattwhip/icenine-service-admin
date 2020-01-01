@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package dailybonus;
+
+import "common.proto";
+
+
+// Interface exported by the server
+service DailyBonus {
+	// Gets the daily bonus status for a given user ID
+	rpc GetStatus(UserRequest) returns (StatusResponse) {}
+	// Initialize daily bonus for a new user
+	rpc InitNewUser(UserRequest) returns (StatusResponse) {}
+}
+
+message UserRequest {
+    // The user ID of the user
+    string userID = 1;
+}

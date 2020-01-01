@@ -1,0 +1,52 @@
+.kafkaReaderIcon {
+    margin: 0px;
+    padding: 0px;
+    padding-right: 10px;
+}
+
+.disabledIcon {
+    color: gray;
+}
+
+.statusIconIdle {
+    color: gray;
+}
+.statusIconConnecting {
+    color: yellow;
+}
+.statusIconOpen {
+    color: green;
+}
+.statusIconClosing {
+    color: orange;
+}
+.statusIconError {
+    color: red;
+}
+
+.customTopicText {
+    margin-right: 10px;
+}
+
+.topicBrowser {
+    width: 500px;
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-right: 0px;
+}
+
+.topicTable {
+    width: 100%;
+}
+
+.topicNameCell {
+    font-size: 14px;
+}
+
+.topicMessagesCell {
+    font-size: 14px;
+    display: flex;
+    justify-content: end;
+}

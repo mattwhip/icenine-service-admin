@@ -1,0 +1,16 @@
+.messageContentPanel {
+    height: calc(100vh - 65px - 70px - 20px);
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    width: 100%;
+}
+
+.messageLabel {
+    font-size: 14px;
+}
+
+.jsonContainer {
+    margin-top: 8px;
+    height: calc(100vh - 65px - 70px - 20px - 125px);
+}

@@ -1,0 +1,10 @@
+.messagesPanel {
+    width: 500px;
+    background-color: #333;
+    color: white;
+    padding: 5px;
+}
+
+.messagesTable {
+    width: 100%;
+}

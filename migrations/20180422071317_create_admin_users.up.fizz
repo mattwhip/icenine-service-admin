@@ -1,0 +1,6 @@
+create_table("admin_users") {
+	t.Column("id", "uuid", {"primary": true})
+	t.Column("u_name", "string", {"size": 100})
+	t.Column("p_hash", "string", {})
+}
+add_index("admin_users", "u_name", {"unique": true})

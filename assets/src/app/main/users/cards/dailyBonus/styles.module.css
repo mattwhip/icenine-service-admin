@@ -1,0 +1,17 @@
+.dailyBonusRow {
+    padding-top: 5px;
+}
+
+.dailyBonus {
+    padding-top: 5px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.configTextField {
+    background-color: lightgray;
+    padding-left: 0px;
+    padding-right: 0px;
+}

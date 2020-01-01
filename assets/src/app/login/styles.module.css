@@ -1,0 +1,41 @@
+.login {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #3e3f3f;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.loginContainer {
+    padding: 30px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.loginTitle {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: #3e3f3f;
+}
+
+.spacer {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.submit {
+    width: 100%;
+}

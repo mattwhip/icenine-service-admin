@@ -1,0 +1,63 @@
+syntax = "proto3";
+
+package teenpatti;
+
+// TableStatus is the state of the table
+message TableStatus {
+    // state of the game
+    uint32 state = 1;
+    // array of pots    
+    repeated Pot pots = 2;
+    // amount of the current stake
+    int64 currentStakeAmount = 3;
+    // userID of whose turn it is
+    string currentUser = 4;
+    // users is a map of user info in the table
+    map<int32, User> users = 5;
+}
+
+// TableConfiguration contains the configuration of the table
+message TableConfiguration {
+    //time given to user to decide action
+    int64 milliSecondsToDecide = 1;
+    //time between rounds
+    int64 milliSecondsBetweenRounds = 2;
+    //time for user action animation
+    int64 milliSecondsForUserActionAnimation = 3;
+    //time for celebration
+    int64 milliSecondsForCelebration = 4;
+    //time before first round
+    int64 milliSecondsBeforeFirstRound = 5;
+    //time before the last user in table is forced to exit
+    int64 milliSecondsBeforeLastUserExit = 6;
+    //number of seats in table
+    int32 numberOfSeats = 7;
+    //number of turn a user does not respond before being kicked out
+    int32 idleTurnLimit = 8;
+    //starting bet amount
+    int64 startingStakeAmount = 9;
+}
+
+// Pot contains information of bets in a round
+message Pot {
+    // amount in a single Pot
+    int64 amount = 1;
+    // userIDs of users that have a stake in the pot
+    repeated string users = 2;
+    // userID of winner of this pot
+    string winner = 3;
+}
+
+// User contains information of user in a table
+message User {
+    // user id
+    string id = 1;
+    // blind is true if user is blind in round else false
+    bool blind = 2;
+    // inPlay is true when user is in current round else false
+    bool inPlay = 3;
+    // lastBet is the amount user bet in their last turn
+    int64 lastBet = 4;
+    // totalBet is the amount user bet in the current round so far
+    int64 totalBet = 5;
+}

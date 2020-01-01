@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package matchmaking;
+
+// CancelResponse is a quickmatch response
+message CancelResponse {
+    // Sucess is true if the user was found and removed from matchmaking queues and false otherwise
+    bool success = 1;
+}
+
+message MatchFound {
+    // usersToGameInstanceTopic is the kafka topic to which users send messages for this matched game
+    string usersToGameInstanceTopic = 1;
+}

@@ -1,0 +1,1 @@
+This repo holds all protobuf message definitions used in the project.

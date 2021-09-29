@@ -21,7 +21,7 @@
     "gopherjs-loader": "^0.0.1",
     "jquery": "^3.4.1",
     "jquery-ujs": "~1.2.2",
-    "jsoneditor": "^5.27.0",
+    "jsoneditor": "^9.5.6",
     "jsoneditor-react": "^1.0.0",
     "jszip": "^3.1.5",
     "jw-react-pagination": "^1.0.6",

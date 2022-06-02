@@ -30,7 +30,7 @@
     "npm-install-webpack-plugin": "4.0.5",
     "path": "~0.12.7",
     "prop-types": "^15.6.1",
-    "protobufjs": "^6.8.8",
+    "protobufjs": "^6.11.3",
     "react": "^16.3.2",
     "react-bootstrap": "^0.32.4",
     "react-collapsible": "^2.3.2",

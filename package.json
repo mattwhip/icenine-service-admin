@@ -23,7 +23,7 @@
     "jquery-ujs": "~1.2.2",
     "jsoneditor": "^5.27.0",
     "jsoneditor-react": "^1.0.0",
-    "jszip": "^3.1.5",
+    "jszip": "^3.7.0",
     "jw-react-pagination": "^1.0.6",
     "node-sass": "^4.10.0",
     "npm": "^6.9.0",
